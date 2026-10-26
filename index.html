@@ -1,161 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Learners - Gautam Jha</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;_fbq.push=n;_fbq.loaded=!0;_fbq.version='2.0';
+    _fbq.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '1919340612806756'); 
+    fbq('track', 'PageView');
+    </script>
 
-<title>Trading Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
 
-fbq('init', '2027397264819185');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent');
-</script>
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            background: #ffffff;
+        }
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-text-align:center;
-color:white;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-}
+        .main-img-box {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 20px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-/* TOP BAR */
-.topbar{
-background:#ffd700;
-color:#000;
-padding:12px;
-font-weight:900;
-font-size:17px;
-}
+        .main-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-/* PROFILE */
-.profile{
-margin-top:25px;
-}
-.profile img{
-width:130px;
-height:130px;
-border-radius:50%;
-border:5px solid #ffd700;
-}
+        .tagline {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #111;
+            line-height: 1.4;
+        }
 
-/* TEXT */
-.title{
-font-size:24px;
-font-weight:900;
-margin-top:10px;
-color:#ffd700;
-}
-.subtitle{
-font-size:16px;
-font-weight:700;
-}
-.counter{
-margin-top:8px;
-font-weight:700;
-}
+        .hero-text {
+            font-size: 22px;
+            font-weight: 500;
+            color: #111;
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
 
-/* BOX */
-.box{
-background:rgba(0,0,0,0.4);
-margin:12px 20px;
-padding:12px;
-border-radius:10px;
-font-weight:700;
-}
+        .hero-text span {
+            display: block;
+        }
 
-/* BUTTON */
-.join-btn{
-background:#ffd700;
-color:#000;
-padding:16px;
-margin:20px;
-border-radius:12px;
-font-size:18px;
-font-weight:900;
-cursor:pointer;
-animation:pulse 1.5s infinite;
-}
+        .experience-text {
+            font-size: 20px;
+            font-weight: 500;
+            color: #111;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
-}
+        .dots {
+            font-size: 20px;
+            letter-spacing: 3px;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-/* ADS */
-.ads{
-margin:20px 0;
-}
-.ads a{
-background:black;
-color:#ffd700;
-padding:10px 18px;
-border-radius:20px;
-text-decoration:none;
-font-size:13px;
-}
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background-color: #0077c8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 10px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 119, 200, 0.3);
+            transition: background-color 0.2s, transform 0.1s;
+            margin-bottom: 25px;
+        }
 
-/* DISCLAIMER */
-.disclaimer{
-background:#000;
-color:#ccc;
-font-size:12px;
-padding:14px;
-line-height:1.6;
-}
-</style>
+        .cta-btn:active {
+            transform: scale(0.99);
+            background-color: #0066ad;
+        }
+
+        .cta-btn .main-text {
+            font-size: 20px;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .cta-btn .sub-text {
+            font-size: 13px;
+            font-weight: 300;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* Timer Section */
+        .timer-container {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .timer-numbers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #d90429;
+            margin-bottom: 4px;
+        }
+
+        .timer-labels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #d90429;
+            letter-spacing: 0.5px;
+        }
+
+        .timer-labels span {
+            width: 60px;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="profile">
-<img src="profile.jpg" alt="Profile">
-</div>
+    <div class="container">
+        <!-- Profile / Hero Image -->
+        <div class="main-img-box">
+            <!-- अपनी फोटो का लिंक यहाँ लगाएं -->
+            <img src="profile.png" alt="Stock Learners - Gautam Jha">
+        </div>
 
-<div class="title">Trade With Mohit Agrawal</div>
-<div class="subtitle">Market Insights & Learning</div>
-<div class="counter">👥 2,300+ traders joined today</div>
+        <!-- Tagline -->
+        <div class="tagline">
+            💸 | Intraday Trader | Investor | Mentor
+        </div>
 
-<div class="box">📊 Market Analysis & Learning</div>
-<div class="box">📈 Intraday & Options Discussion</div>
-<div class="box">📚 14+ Years Market Experience</div>
+        <!-- Channel Highlight -->
+        <div class="hero-text">
+            India's best channel for #Nifty<br>
+            #Banknifty and<br>
+            #stocks calls. 🚀🚀
+        </div>
 
-<div class="join-btn" id="joinBtn">JOIN TELEGRAM CHANNEL</div>
+        <!-- Experience -->
+        <div class="experience-text">
+            🏆 | 5+ Years Experience |<br>
+            Equity, Nifty & Banknifty Options 📊
+        </div>
 
-<div class="ads">
-<a href="https://t.me/+GZeKfXdd9lIxZTJl">Advertised by elitemarketing.tech</a>
-</div>
+        <div class="dots">...</div>
 
-<script>
-const tgLink="https://t.me/+FbqZCLER6y4zYTBl";
+        <!-- CTA Button -->
+        <button class="cta-btn" onclick="redirectToTelegram()">
+            <span class="main-text">join free telegram chennal now</span>
+            <span class="sub-text">subscribe now</span>
+        </button>
 
-document.getElementById("joinBtn").addEventListener("click",function(){
-fbq('track','Lead',{ value:10, currency:'INR' });
-window.location.href = tgLink;
-});
-</script>
+        <!-- Countdown Timer -->
+        <div class="timer-container">
+            <div class="timer-numbers">
+                <span id="hours">13</span> : 
+                <span id="minutes">57</span> : 
+                <span id="seconds">08</span>
+            </div>
+            <div class="timer-labels">
+                <span>HOURS</span>
+                <span>MINUTES</span>
+                <span>SECONDS</span>
+            </div>
+        </div>
+    </div>
 
-<div class="disclaimer">
-<strong>Disclaimer:</strong><br>
-This community is for educational and informational purposes only.
-We do not provide financial or investment advice.
-Trading in financial markets involves risk.
-Always consult a qualified financial advisor before making any investment decisions.
-</div>
+    <script>
+        // Telegram Redirect Function
+        function redirectToTelegram() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'CustomEvent', {content_name: 'Community Join Click'});
+            }
+
+            var telegramLink = "https://t.me/+q564hbU8ldQyNzdl";
+
+            setTimeout(function() {
+                window.location.href = telegramLink;
+            }, 300);
+        }
+
+        // Live Countdown Timer Script
+        function startTimer(durationInSeconds) {
+            let timer = durationInSeconds;
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            setInterval(function () {
+                let hours = parseInt(timer / 3600, 10);
+                let minutes = parseInt((timer % 3600) / 60, 10);
+                let seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                hoursEl.textContent = hours;
+                minutesEl.textContent = minutes;
+                secondsEl.textContent = seconds;
+
+                if (--timer < 0) {
+                    timer = durationInSeconds; // Reset when reaches zero
+                }
+            }, 1000);
+        }
+
+        // Start timer with 13 hours, 57 minutes, 8 seconds (50,228 seconds)
+        window.onload = function () {
+            startTimer(50228);
+        };
+    </script>
 
 </body>
 </html>
