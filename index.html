@@ -29,7 +29,7 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: #f4f7f9;
             color: #000000;
             display: flex;
             justify-content: center;
@@ -43,15 +43,19 @@
             max-width: 420px;
             text-align: center;
             background: #ffffff;
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
         .main-img-box {
-            width: 70%;
-            max-width: 220px;
+            width: 65%;
+            max-width: 200px;
             margin: 0 auto 20px auto;
-            border-radius: 16px;
+            border-radius: 50%;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            border: 4px solid #0077c8;
         }
 
         .main-img-box img {
@@ -61,86 +65,104 @@
         }
 
         .tagline {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: #111;
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #222;
             line-height: 1.4;
         }
 
         .hero-text {
-            font-size: 22px;
-            font-weight: 500;
-            color: #111;
-            line-height: 1.4;
-            margin-bottom: 25px;
-        }
-
-        .hero-text span {
-            display: block;
+            font-size: 21px;
+            font-weight: 600;
+            color: #0077c8;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            background: #eef7ff;
+            padding: 12px;
+            border-radius: 12px;
         }
 
         .experience-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
-            color: #111;
+            color: #333;
             line-height: 1.4;
             margin-bottom: 15px;
         }
 
         .dots {
-            font-size: 20px;
+            font-size: 22px;
             letter-spacing: 3px;
-            color: #333;
+            color: #888;
             margin-bottom: 20px;
         }
 
         .cta-btn {
             display: block;
             width: 100%;
-            background-color: #0077c8;
+            background: linear-gradient(135deg, #229ED9 0%, #0077c8 100%);
             color: #ffffff;
             text-decoration: none;
-            padding: 14px 10px;
-            border-radius: 4px;
+            padding: 16px 12px;
+            border-radius: 12px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0, 119, 200, 0.3);
-            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 15px rgba(0, 119, 200, 0.4);
+            transition: all 0.2s ease;
             margin-bottom: 25px;
         }
 
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 200, 0.5);
+        }
+
         .cta-btn:active {
-            transform: scale(0.99);
-            background-color: #0066ad;
+            transform: scale(0.98);
         }
 
         .cta-btn .main-text {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 19px;
+            font-weight: 700;
             display: block;
-            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
 
         .cta-btn .sub-text {
             font-size: 13px;
-            font-weight: 300;
+            font-weight: 400;
             display: block;
-            opacity: 0.9;
+            opacity: 0.95;
+            text-transform: capitalize;
         }
 
         /* Timer Section */
         .timer-container {
             margin-top: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            background: #fff5f5;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px dashed #d90429;
+        }
+
+        .timer-title {
+            font-size: 13px;
+            color: #d90429;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .timer-numbers {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
-            font-size: 22px;
+            gap: 10px;
+            font-size: 24px;
             font-weight: bold;
             color: #d90429;
             margin-bottom: 4px;
@@ -150,14 +172,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            font-size: 13px;
+            gap: 14px;
+            font-size: 11px;
             color: #d90429;
             letter-spacing: 0.5px;
+            font-weight: 600;
         }
 
         .timer-labels span {
-            width: 60px;
+            width: 50px;
             text-align: center;
         }
     </style>
@@ -167,9 +190,7 @@
     <div class="container">
         <!-- Profile / Hero Image -->
         <div class="main-img-box">
-            <!-- अपनी फोटो का लिंक यहाँ लगाएं -->
-            <img src="profile.png" alt="Marathi Abhi अभी मराठी 📊
-">
+            <img src="profile.png" alt="Marathi Abhi अभी मराठी" onerror="this.src='https://placehold.co/200x200/0077c8/ffffff?text=Stock+Learners'">
         </div>
 
         <!-- Tagline -->
@@ -180,8 +201,7 @@
         <!-- Channel Highlight -->
         <div class="hero-text">
             India's best channel for #Nifty<br>
-            #Banknifty and<br>
-            #stocks calls. 🚀🚀
+            #Banknifty and #stocks calls 🚀🚀
         </div>
 
         <!-- Experience -->
@@ -194,19 +214,20 @@
 
         <!-- CTA Button -->
         <button class="cta-btn" onclick="redirectToTelegram()">
-            <span class="main-text">join free telegram chennal now</span>
-            <span class="sub-text">subscribe now</span>
+            <span class="main-text">Join Free Telegram Channel Now</span>
+            <span class="sub-text">👉 Click Here To Subscribe 👈</span>
         </button>
 
         <!-- Countdown Timer -->
         <div class="timer-container">
+            <div class="timer-title">⏰ Offer Expires Soon:</div>
             <div class="timer-numbers">
-                 
-                <span id="minutes">01</span> : 
+                <span id="hours">13</span> : 
+                <span id="minutes">57</span> : 
                 <span id="seconds">08</span>
             </div>
             <div class="timer-labels">
-                
+                <span>HOURS</span>
                 <span>MINUTES</span>
                 <span>SECONDS</span>
             </div>
@@ -214,16 +235,30 @@
     </div>
 
     <script>
-        // Telegram Redirect Function
+        // Telegram Redirect Function with Meta (Facebook) Tracking
         function redirectToTelegram() {
+            // Track Facebook standard & custom conversion events
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'CustomEvent', {content_name: 'Community Join Click'});
+                // Standard Lead Event
+                fbq('track', 'Lead', {
+                    content_name: 'Telegram Channel Join',
+                    status: 'Clicked'
+                });
+
+                // Standard Subscribe Event
+                fbq('track', 'Subscribe', {
+                    value: '0.00',
+                    currency: 'INR'
+                });
+
+                // Custom Event
+                fbq('trackCustom', 'TelegramSubscribeClick');
             }
 
             var telegramLink = "https://t.me/+fqax5hRizExmMDA9";
 
             setTimeout(function() {
-                window.location.href = telegramLink;
+                window.location.href = telegramLink;a
             }, 300);
         }
 
@@ -243,9 +278,9 @@
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
 
-                hoursEl.textContent = hours;
-                minutesEl.textContent = minutes;
-                secondsEl.textContent = seconds;
+                if(hoursEl) hoursEl.textContent = hours;
+                if(minutesEl) minutesEl.textContent = minutes;
+                if(secondsEl) secondsEl.textContent = seconds;
 
                 if (--timer < 0) {
                     timer = durationInSeconds; // Reset when reaches zero
